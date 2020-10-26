@@ -79,7 +79,7 @@ public class Cubo extends javax.swing.JFrame {
                     tamaño=tamaño>10? (tamaño-10): 10;
                     crearCubo();
                 }
-                else if (e.getKeyCode()==KeyEvent.VK_RIGHT){
+                else if (e.getKeyChar()=='l'){
                     refrescar();
                     horizontal +=10;
                     limites();
@@ -102,7 +102,7 @@ public class Cubo extends javax.swing.JFrame {
                     limites();
                     crearCubo();
                 }
-                else if (e.getKeyChar()=='q'){
+                else if (e.getKeyChar()=='o'){
                     refrescar();
                     if (izquierda > - (tamaño/2) && izq == 1){
                         izquierda -=2;
@@ -121,7 +121,7 @@ public class Cubo extends javax.swing.JFrame {
                     limites();
                     crearCubo();
                 }
-                else if (e.getKeyChar()=='w'){
+                else if (e.getKeyChar()=='k'){
                     refrescar();
                     if (izquierda < 0 && der == 1){
                         izquierda +=2;
@@ -219,6 +219,7 @@ public class Cubo extends javax.swing.JFrame {
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
       refrescar();
+       crearCubo();
     }//GEN-LAST:event_btnCrearActionPerformed
 
     /**
